@@ -1,0 +1,291 @@
+html {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+}
+
+/*Phone*/
+@media (min-width:100px) {
+
+    /*Took from pdf of lecture*/
+    section,
+    header {
+        margin-left: 0em;
+        margin-right: 0em;
+
+
+    }
+
+}
+
+@media (min-width:600px) {
+
+    section,
+    header,
+    footer {
+        margin-left: 2em;
+        margin-right: 2em;
+
+    }
+
+
+}
+
+/* Desktop */
+@media (min-width:1050px) {
+
+    section,
+    header,
+    footer {
+        margin-left: 5em;
+        margin-right: 5em;
+
+    }
+}
+
+/*Bigger Desktop*/
+@media (min-width:1250px) {
+
+    section,
+    header,
+    footer {
+        margin-left: 10em;
+        margin-right: 10em;
+
+    }
+}
+
+input {
+    width: 100%;
+}
+
+div {}
+
+a:link {
+    color: black;
+    text-decoration: none;
+
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #991115;
+
+}
+
+.images:hover {
+    scale: 1.1;
+    box-shadow: #003D7A 0px 5px 100px;
+}
+
+.container1:hover {
+    scale: 1.05;
+}
+
+body {
+    background-color: #051537;
+}
+
+button {
+    border-radius: 20px;
+    border: 0;
+    box-shadow: 0 1px 4px black;
+    background-image: linear-gradient(to right, #0458AB, #051537);
+    padding: 10px;
+    height: 50px;
+    cursor: pointer;
+}
+
+button:hover {
+    scale: 1.05;
+}
+
+select {
+    height: 48px;
+    padding: 15px;
+    border: none;
+    font-size: 16px;
+    background-color: #fff;
+    color: #333;
+    margin: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: right;
+    background-color: #04247C;
+    border-radius: 1em;
+    padding: 1em;
+    box-shadow: 0 1px 4px black;
+
+}
+
+input {
+    padding: 15px;
+    margin: 5px;
+    width: 88%;
+}
+
+section {
+    background-color: #04247C;
+    border-radius: 1em;
+    padding: 1em;
+    margin-top: 2em;
+    box-shadow: 0 1px 4px black;
+
+}
+
+form {
+    flex-direction: row;
+}
+
+.form {
+    background-color: #051537;
+    opacity: 0;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    /*https://www.w3schools.com/css/css3_transitions.asp*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form2 {
+    background-color: #051537;
+    opacity: 0;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form.open {
+    opacity: 1;
+    z-index: 999;
+}
+
+.form2.open {
+    opacity: 1;
+    z-index: 999;
+}
+
+.form3 {
+    background-color: #051537;
+    opacity: 0;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form3.open {
+    opacity: 1;
+    z-index: 999;
+}
+
+.h1 {
+    margin-right: 100px;
+    width: 50%;
+}
+
+.h2 {
+    width: 1000px;
+}
+
+.inner-form {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.inner-form2 {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.div1 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+#div2 {
+    width: 40%;
+}
+
+#div3 {
+    display: flex;
+    justify-content: space-around !important;
+
+}
+
+#div5 {
+    width: 40%;
+}
+
+#img1 {
+    width: 100%;
+    border-radius: 20px;
+}
+
+#closeForm {
+    width: fit-content;
+    align-self: right;
+}
+
+#firstname {
+    width: 40%;
+}
+
+#lastname {
+    width: 40%;
+}
+
+#zipcode {
+    width: 20%;
+}
+
+#Contact-Info {
+    font-size: smaller;
+    padding: 20px;
+    background-color: #051537;
+    border-radius: 20px;
+
+}
+
+#Shopping-Cart {
+    font-size: smaller;
+    padding: 20px;
+    background-color: #051537;
+    border-radius: 20px;
+}
+
+#ariwa {
+    width: 40%;
+
+}

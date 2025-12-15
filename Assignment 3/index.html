@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Elias">
+    <title>Donate Food to Seals</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel=" stylesheet" href="style.css">
+</head>
+
+<body class="bg-dark text-white">
+    <header>
+        <div class="h1">
+            <h1>Donate Food to Seals</h1>
+        </div>
+        <button id="openForm"><b>Checkout</b></button>
+    </header>
+    <div class="form" id="form">
+        <section>
+            <div>
+                <h2>Shipping address </h2>
+                <div class="inner-form">
+
+                    <form>
+                        <input type="text" id="firstname" placeholder="First name">
+                        <input type="text" id="lastname" placeholder="Last name">
+                        <br>
+                        <input type="text" id="company" placeholder="Company (required for business adresses)"> <br>
+                        <input type="text" id="address" placeholder="Address"> <br>
+                        <input type="text" id="apartment" placeholder="Aparmtent, suite, etc.(optional)"> <br>
+                        <input type="text" id="city" placeholder="City"> <br>
+                        <select name="country" id="country" onchange="updateStates()">
+                            <option value="">-- Choose country --</option>
+                            <option value="AT">Austria</option>
+                            <option value="DE">Germany</option>
+                            <option value="CH">Switzerland</option>
+
+                        </select>
+                        <select name="state" id="state">
+                            <option value="">--Select State--</option>
+                        </select>
+                        <input inputmode="numeric" maxlength="6" id="zipcode" placeholder="ZIP Code" required> <br>
+                        <!--https://www.w3schools.com/TAgs/att_inputmode.asp-->
+                        <input type="tel" id="phonenumber" placeholder="Phone number (optional)"> <br>
+                        <div id="div3"> <button type="button" id="closeForm">X
+                                Close</button>
+                            <button type="button" id="openForm2">Submit and continue to cart</button>
+                            <button type="reset">Reset everything</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="form2" id="form2">
+        <section class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="w-100 text-center m-2" id="Contact-Info"></div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="w-100 text-center m-2" id="Shopping-Cart"></div>
+                    <div class="w-100 text-center m-2" id="Prices"></div>
+                    <form id="Form4">
+                        <input type="text" id="discount" class="w-30" placeholder="Discount-Code" onchange="Prices()">
+                        <button type="button" id="submitdiscount" class="w-10">Submit</button>
+                        <button type="button" id="closeForm2">X close</button>
+                        <button type="submit" id="Finish">Confirm Order</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="w-100 text-center m-2 form3" id="Contact-Info">
+        <h1 class="display-1">Thank you for buying food for our Seals!!! Your order has been submitted</h1>
+        <button type="button" id="closethankyou">Return to Shop</button>
+    </div>
+    <main>
+        <section>
+            <div class="div1">
+                <div id="div5"><img src="images/harp-seal-pup.webp" alt="Baby Seal" id="img1"></div>
+                <div id="div2">
+                    <h2>Seals in need</h2>
+                    <p>Seals around the world are facing serious threats due to climate change, pollution, and the loss
+                        of
+                        their natural habitats. Many are struggling to find enough food to survive.</p>
+                    <p>On our website, you can make a difference by donating food to help rescued and vulnerable seals
+                        get
+                        the care they urgently need. Your support provides nourishment, recovery, and hope for a safer
+                        future.</p>
+                    <p>Every donation counts —> help us protect seals today. With the Code <b>SafeSeals</b> get a
+                        discount
+                        of -20%, if you donate at least 3 items.</p>
+                </div>
+
+            </div>
+            <div>
+
+
+            </div>
+        </section>
+        <section>
+            <h1 class="text-center mb-4">Donate Food here!</h1>
+            <div class="container rounded-4">
+                <div class="row g-4">
+
+                    <div class=" col-lg-3 d-flex">
+                        <div class="card  border-2 rounded-4 shadow w-100 text-center">
+                            <div class="p-3">
+                                <img src="images/dcb545e043609dead9ba26373f2d8b38,e51f5182.webp"
+                                    class="img-fluid rounded-circle" alt="Product1">
+                            </div>
+                            <div class="card-body pt-0">
+                                <h6 class="fw-bold mb-1">Random Eel found on the side of the street</h6>
+                                <p class="text-muted mb-2">500€</p>
+                                <button id="Product1" class="w-100">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-3 d-flex">
+                        <div class="card rounded-4 shadow w-100 text-center">
+                            <div class="p-3">
+                                <img src="images/blobfish.webp" class="img-fluid rounded-circle" alt="Product2">
+                            </div>
+                            <div class="card-body pt-0">
+                                <h6 class="fw-bold mb-1">Fish</h6>
+                                <p class="text-muted mb-2">200€</p>
+                                <button id="Product2" class=" w-100">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class=" col-lg-3 d-flex">
+                        <div class="card rounded-4 shadow w-100 text-center">
+                            <div class="p-3">
+                                <img src="images/Gestreifter-Seewolf-678x381.jpeg" class="img-fluid rounded-circle"
+                                    alt="Product3">
+                            </div>
+                            <div class="card-body pt-0">
+                                <h6 class="fw-bold mb-1">Deadly fis</h6>
+                                <p class="text-muted mb-2">50€</p>
+                                <button id="Product3" class="btn-dark w-100">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class=" col-lg-3 d-flex">
+                        <div class="card rounded-4 shadow w-100 text-center">
+                            <div class="p-3">
+                                <img src="images/Sushi Fisch.jpg" class="img-fluid rounded-circle" alt="Product4">
+                            </div>
+                            <div class="card-body pt-0">
+                                <h6 class="fw-bold mb-1">Fresh Catched Fish</h6>
+                                <p class="text-muted mb-2">80€</p>
+                                <button id="Product4" class="btn-dark w-100">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-flex">
+                        <div class="card rounded-4 shadow w-100 text-center">
+                            <div class="p-3">
+                                <img src="images/gorilla-fisch--1-.jpg" class="img-fluid rounded-circle" alt="Product5">
+                            </div>
+                            <div class="card-body pt-0">
+                                <h6 class="fw-bold mb-1">Small Fish</h6>
+                                <p class="text-muted mb-2">20€</p>
+                                <button id="Product5" class="btn-dark w-100">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-flex">
+                        <div class="card rounded-4 shadow w-100 text-center">
+                            <div class="p-3">
+                                <img src="images/chaunacops-coloratus.jpg" class="img-fluid rounded-circle"
+                                    alt="Product6">
+                            </div>
+                            <div class="card-body pt-0">
+                                <h6 class="fw-bold mb-1">Red Ball fish</h6>
+                                <p class="text-muted mb-2">80€</p>
+                                <button id="Product6" class="btn-dark w-100">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-flex">
+                        <div class="card rounded-4 shadow w-100 text-center">
+                            <div class="p-3">
+                                <img src="images/photo-1578507065211-1c4e99a5fd24.jpg" class="img-fluid rounded-circle"
+                                    alt="Product7">
+                            </div>
+                            <div class="card-body pt-0">
+                                <h6 class="fw-bold mb-1">Funny fish</h6>
+                                <p class="text-muted mb-2">50€</p>
+                                <button id="Product7" class="btn-dark w-100">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-flex">
+                        <div class="card rounded-4 shadow w-100 text-center">
+                            <div class="p-3">
+                                <img src="images/leckeres-schnitzel-vom-fisch_2955.jpg" class="img-fluid rounded-circle"
+                                    alt="Product8">
+                            </div>
+                            <div class="card-body pt-0">
+                                <h6 class="fw-bold mb-1">Young fish</h6>
+                                <p class="text-muted mb-2">10€</p>
+                                <button id="Product8" class="btn-dark w-100">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-flex">
+                        <div class="card rounded-4 shadow w-100 text-center">
+                            <div class="p-3">
+                                <img src="images/artworks-JUDcFzzl2A5IUi5c-ImydIw-t1080x1080.jpg"
+                                    class="img-fluid rounded-circle" alt="Product9">
+                            </div>
+                            <div class="card-body pt-0">
+                                <h6 class="fw-bold mb-1">Perfect fish</h6>
+                                <p class="text-muted mb-2">30€</p>
+                                <button id="Product9" class="btn-dark w-100">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 d-flex">
+                        <div class="card rounded-4 shadow w-100 text-center">
+                            <div class="p-3">
+                                <img src="images/fish-silly-fish.png" class="img-fluid rounded-circle" alt="Product10">
+                            </div>
+                            <div class="card-body pt-0">
+                                <h6 class="fw-bold mb-1">Super fish</h6>
+                                <p class="text-muted mb-2">200€</p>
+                                <button id="Product10" class="btn-dark w-100">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center">
+        <p>Terra, the center of the universe</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+
+
+</html>
