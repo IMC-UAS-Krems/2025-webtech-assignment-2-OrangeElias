@@ -43,7 +43,7 @@ open2.addEventListener("click", () => {
         ShoppingCart(fishList); /*executes the function to get items being bought */
         Prices();/*Executes so you know what to pay */
     }
-
+   
 });
 
 close2.addEventListener("click", () => {
@@ -52,7 +52,7 @@ close2.addEventListener("click", () => {
 });
 
 let Price = 0;
-let items_amount = 0;
+let items_amount=0;
 const Product1 = document.getElementById("Product1");
 const Pproduct1 = 500;/*Price */
 const Product2 = document.getElementById("Product2");
@@ -69,85 +69,85 @@ const Product7 = document.getElementById("Product7");
 const Pproduct7 = 50;
 const Product8 = document.getElementById("Product8");
 const Pproduct8 = 10;
-const Product9 = document.getElementById("Product9");
-const Pproduct9 = 30;
-const Product10 = document.getElementById("Product10");
-const Pproduct10 = 200;
+const Product9=document.getElementById("Product9");
+const Pproduct9=30;
+const Product10=document.getElementById("Product10");
+const Pproduct10=200;
 /*Prices and amount of items getting bought get defined */
 Product1.addEventListener("click", () => {
-    Price = Price + Pproduct1;
-    items_amount += 1;
+    Price=Price+Pproduct1;
+    items_amount+=1;
     fishList.push("Random Eel found on the side of the street: 500€");
     ShoppingCart();
     Prices();
-
+    
 });
 Product2.addEventListener("click", () => {
-    Price = Price + Pproduct2;
-    items_amount += 1;
+    Price=Price+Pproduct2;
+    items_amount+=1;
     fishList.push("Fish: 200€");
     ShoppingCart();
     Prices();
 });
 Product3.addEventListener("click", () => {
-    Price = Price + Pproduct3;
-    items_amount += 1;
+    Price=Price+Pproduct3;
+    items_amount+=1;
     fishList.push("Deadly fis: 50€");
     ShoppingCart();
     Prices();
 });
 Product4.addEventListener("click", () => {
-    Price = Price + Pproduct4;
-    items_amount += 1;
+    Price=Price+Pproduct4;
+    items_amount+=1;
     fishList.push("Fresh Catched Fish: 80€");
     ShoppingCart();
     Prices();
 });
 Product5.addEventListener("click", () => {
-    Price = Price + Pproduct5;
-    items_amount += 1;
+    Price=Price+Pproduct5;
+    items_amount+=1;
     fishList.push("Small Fish: 20€");
     ShoppingCart();
     Prices();
 });
 Product6.addEventListener("click", () => {
-    Price = Price + Pproduct6;
-    items_amount += 1;
+    Price=Price+Pproduct6;
+    items_amount+=1;
     fishList.push("Red Ball fish: 80€");
     ShoppingCart();
     Prices();
 });
 Product7.addEventListener("click", () => {
-    Price = Price + Pproduct7;
-    items_amount += 1;
+    Price=Price+Pproduct7;
+    items_amount+=1;
     fishList.push("Funny Fish: 50€");
     ShoppingCart();
     Prices();
-
+    
 });
 Product8.addEventListener("click", () => {
-    Price = Price + Pproduct8;
-    items_amount += 1;
+    Price=Price+Pproduct8;
+    items_amount+=1;
     fishList.push("Young fish: 10€");
     ShoppingCart();
     Prices();
-
+    
 });
 Product9.addEventListener("click", () => {
-    Price = Price + Pproduct9;
-    items_amount += 1;
+    Price=Price+Pproduct9;
+    items_amount+=1;
     fishList.push("Perfect fish: 30€");
     ShoppingCart();
     Prices();
-
+    
 });
 Product10.addEventListener("click", () => {
-    Price = Price + Pproduct10;
-    items_amount += 1;
+    Price=Price+Pproduct10;
+    items_amount+=1;
     fishList.push("Super fish: 200€");
     ShoppingCart();
     Prices();
-
+    
 });
 
 function updateStates() { /*States get corresponding states */
@@ -228,46 +228,46 @@ function validateInput() { /*This function checks, if the inputs are valid and s
     zipcode = document.getElementById("zipcode").value.trim();
     phonenumber = document.getElementById("phonenumber").value.trim();
 
-    if (firstname.trim() === "") { /*A friend told me to use Trim, because the space input gets trimmed away */
+    if (firstname.trim()==="") { /*A friend told me to use Trim, because the space input gets trimmed away */
         alert("Please insert your First name");
         return false; /*https://www.w3schools.com/jsref/met_win_alert.asp */
     }
-    if (lastname.trim() === "") {
+    if (lastname.trim()==="") {
         alert("Please isnert your Last name");
         return false;
     }
 
-    if (address.trim() === "") {
+    if (address.trim()==="") {
         alert("Please insert your adress");
         return false;
     }
-    if (city.trim() === "") {
+    if (city.trim()==="") {
         alert("Please insert your city");
         return false;
     }
-    if (country === "") {/*Doesnt need trim, because its not a textfield */
+    if (country==="") {/*Doesnt need trim, because its not a textfield */
         alert("Please choose your country");
         return false;
     }
-    if (state === "") {
+    if (state==="") {
         alert("Please choose your state/region");
         return false;
     }
-    if (zipcode.trim() === "") {
+    if (zipcode.trim()==="") {
         alert("Please insert your zip code");
         return false;
     }
 
     const zipValid = /^\d{4,6}$/; /*https://www.regular-expressions.info/floatingpoint.html */
-    if (zipValid.test(zipcode) === false) {
+    if (zipValid.test(zipcode)===false) {
         alert("Please insert a valid zip code");
         return false;
     }
 
     /*https://www.w3schools.com/js/js_regexp.asp */
-    if (phonenumber.trim() !== "") { /*Checks if their even is something in the input field */ /**https://www.w3schools.com/js/js_comparisons.asp*/
+    if (phonenumber.trim() !== "")  { /*Checks if their even is something in the input field */ /**https://www.w3schools.com/js/js_comparisons.asp*/
         const phoneNumber = /^\d{6,15}$/; /*https://www.w3schools.com/jsref/jsref_regexp_test.asp#:~:text=Description.%20The%20test()%20method%20tests%20for%20a,it%20returns%20true%2C%20otherwise%20it%20returns%20false. */
-        if (phoneNumber.test(phonenumber) === false) {/*Checks if its a valid number*/
+        if (phoneNumber.test(phonenumber)===false){/*Checks if its a valid number*/
             alert("Please insert a valid Phone number");
             return false;
         }
@@ -295,11 +295,11 @@ function ContactInfo() { /*https://www.w3schools.com/js/js_htmldom_html.asp */
         </ul>
     `;/*Inner html inserts the different list items with their corresponding input into the div "Contact-Info" */
 }
-function ShoppingCart() {
-    const Shoppingcart = document.getElementById("Shopping-Cart");
-    let randomtext = `<h3>Your Shopping Cart</h3><ul>`;
+function ShoppingCart(){
+    const Shoppingcart=document.getElementById("Shopping-Cart");
+    let randomtext= `<h3>Your Shopping Cart</h3><ul>`;
 
-    fishList.forEach(function (item) {/*Function, that adds every chosen fish to the list */
+    fishList.forEach(function(item) {/*Function, that adds every chosen fish to the list */
         randomtext += `<li>${item}</li>`; /*https://www.w3schools.com/jsref/jsref_foreach.asp */
     });
 
@@ -309,54 +309,54 @@ function ShoppingCart() {
 
 }
 /*I wanted to make you able to delete your Items from the order, but the code is too complex for me and would take too long*/
-function Prices() {
-    const fishPrice = document.getElementById("Prices");/*https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Math/round */
-    if (code.value === "SafeSeals") {
-        fishPrice.innerHTML = `
+function Prices(){
+    const fishPrice=document.getElementById("Prices");/*https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Math/round */
+    if(code.value==="SafeSeals"){
+        fishPrice.innerHTML=`
             <p>Price:------------------------------------------------------${Price}€</p>
             <p>Taxcut:----------------------------------------------------- +20%
-            <p>With Tax:-----------------------------------------------------${Math.round(Price * 1.2)}</p>
-            <p>Discount SafeSeals -30%:-----------------------------------------${Math.round(Price * 0.3)}€</p>
+            <p>With Tax:-----------------------------------------------------${Math.round(Price*1.2)}</p>
+            <p>Discount SafeSeals -30%:-----------------------------------------${Math.round(Price*0.3)}€</p>
             <hr>
-            <p>Final Price:-----------------------------------------------------------------${Math.round(Price * 1.2 * 0.7)}€</p>
+            <p>Final Price:-----------------------------------------------------------------${Math.round(Price*1.2*0.7)}€</p>
             `}
-    else {
-        fishPrice.innerHTML = `
+    else{
+        fishPrice.innerHTML=`
         <p>Price:------------------------------------------------------${Price}€</p>
         <p>Taxcut:----------------------------------------------------- +20%</p>
-        <p>With Tax:-----------------------------------------------------${Math.round(Price * 1.2)}€</p>
+        <p>With Tax:-----------------------------------------------------${Math.round(Price*1.2)}€</p>
         <hr>
-        <p>Final Price:-----------------------------------------------------------------${Math.round(Price * 1.2)}€</p>`
+        <p>Final Price:-----------------------------------------------------------------${Math.round(Price*1.2)}€</p>`
     }
 }
 
-const submitdiscount = document.getElementById("submitdiscount")
-const code = document.getElementById("discount")
+const submitdiscount=document.getElementById("submitdiscount")
+const code=document.getElementById("discount")
 submitdiscount.addEventListener("click", () => {
-    if (code.value === "SafeSeals" && items_amount >= 3) {
-        Prices()
-        alert("Your code has been succesfully applied")
-    }
-    else {
-        alert("Please insert a valid Discount Code or add more items to your Shopping cart")
-    }
+   if(code.value==="SafeSeals" && items_amount>=3){
+    Prices()
+    alert("Your code has been succesfully applied")
+   }
+   else{
+    alert("Please insert a valid Discount Code or add more items to your Shopping cart")
+   }
 });
-const Finish = document.getElementById("Finish")
-const Form3 = document.getElementById("Form3")
-const Form4 = document.getElementById("Form4")
-Form4.addEventListener("submit", function (e) {
+const Finish=document.getElementById("Finish")
+const Form3=document.getElementById("Form3")
+const Form4=document.getElementById("Form4")
+Form4.addEventListener("submit", function(e){
 
-    if (Price === 0) { /*https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault */
+    if(Price===0){ /*https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault */
         alert("Please add something to your shopping cart")
         e.preventDefault(); /*Tells event is being explicitly handled, so page reset wont coem through until the whole function was checked */
         return;/*returns nothing -> means Order cant be submitted*/
     }
-
-    alert("Thank you for buying food for our seals. You order has been submitted!")
-    /*Reset of items for buying something new*/
-    fishList.length = 0;
-    Price = 0;
-    items_amount = 0;
-    ShoppingCart();
-    Prices();
+    
+        alert("Thank you for buying food for our seals. You order has been submitted!")
+        /*Reset of items for buying something new*/
+        fishList.length = 0;
+        Price = 0;
+        items_amount = 0;
+        ShoppingCart();
+        Prices();
 })
